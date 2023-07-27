@@ -6,8 +6,7 @@
     AuthToken: '{token}'
   method: POST
   name: For admin /admin/role
-  parameters:
-    RequestBody: role info
+  parameters: {}
   url: /admin/role
 05d8cb4052516831cb16770fcb5e9986: !!python/object:__main__.CaseInfo
   description: '-
@@ -17,8 +16,7 @@
     AuthToken: '{token}'
   method: GET
   name: For admin /admin/language
-  parameters:
-    RequestBody: Language
+  parameters: {}
   url: /normal/language
 084ad9e1c71c2de9553a93ec48e4fc2e: !!python/object:__main__.CaseInfo
   description: '-
@@ -28,8 +26,7 @@
     AuthToken: '{token}'
   method: PUT
   name: For admin /admin/project
-  parameters:
-    RequestBody: Project
+  parameters: {}
   url: /admin/project
 0bec8d1ed2134905fbed8b3fe5d6f35e: !!python/object:__main__.CaseInfo
   description: '-
@@ -39,9 +36,16 @@
     AuthToken: '{token}'
   method: DELETE
   name: For admin /admin/language
-  parameters:
-    RequestBody: Language
+  parameters: {}
   url: /admin/language
+1290d674aa0e9655d80f26a38ce48b4e: !!python/object:__main__.CaseInfo
+  description: '-'
+  headers:
+    AuthToken: '{token}'
+  method: POST
+  name: For me_manager /me_manager/UserSign
+  parameters: {}
+  url: /me_manager/UserSign/sign_in
 12c772da33931fa6afe71cf5ee323d94: !!python/object:__main__.CaseInfo
   description: '-
 
@@ -50,8 +54,7 @@
     AuthToken: '{token}'
   method: POST
   name: For me_manager /me_manager/group
-  parameters:
-    RequestBody: Group info
+  parameters: {}
   url: /me_manager/group
 1480c51deb1a00ebd890f45ecd6ac14a: !!python/object:__main__.CaseInfo
   description: '-
@@ -61,8 +64,7 @@
     AuthToken: '{token}'
   method: DELETE
   name: For admin /admin/page
-  parameters:
-    RequestBody: Page
+  parameters: {}
   url: /admin/page
 2147d5cf4987e1f415051a2b77c21615: !!python/object:__main__.CaseInfo
   description: '- swith Kyc query/update  method [get/put]
@@ -72,8 +74,7 @@
     AuthToken: '{token}'
   method: GET
   name: For admin /admin/kyc
-  parameters:
-    RequestBody: Kyc info
+  parameters: {}
   url: /me_manager/kyc
 257055bc79f0487ce606166e1b793f2d: !!python/object:__main__.CaseInfo
   description: '-
@@ -83,8 +84,7 @@
     AuthToken: '{token}'
   method: PUT
   name: For admin /admin/role
-  parameters:
-    RequestBody: role info
+  parameters: {}
   url: /admin/role
 2696b44db0098da43f4e3f4a7b4e30c3: !!python/object:__main__.CaseInfo
   description: '- swith Kyc query/update  method [get/put]
@@ -94,8 +94,7 @@
     AuthToken: '{token}'
   method: PUT
   name: For admin /admin/kyc
-  parameters:
-    RequestBody: Kyc info
+  parameters: {}
   url: /admin/kyc
 44c36c7d3fe5da033f41f0b94bfbaed1: !!python/object:__main__.CaseInfo
   description: '-'
@@ -103,8 +102,7 @@
     AuthToken: '{token}'
   method: PUT
   name: For admin /admin/staff
-  parameters:
-    RequestBody: user info
+  parameters: {}
   url: /admin/staff
 4b3f1fb8e60cc1a6f0e54d6fd1583171: !!python/object:__main__.CaseInfo
   description: '-
@@ -114,8 +112,7 @@
     AuthToken: '{token}'
   method: POST
   name: For me_manager /me_manager/nft
-  parameters:
-    RequestBody: Nft info
+  parameters: {}
   url: /me_manager/nft
 4dd88cda7b6f7577cb6d20488c1765b4: !!python/object:__main__.CaseInfo
   description: '-
@@ -125,9 +122,18 @@
     AuthToken: '{token}'
   method: POST
   name: For admin /admin/project
-  parameters:
-    RequestBody: Project
+  parameters: {}
   url: /admin/project
+4ee4c80f369e5d50ad767d3fbdb0c61d: !!python/object:__main__.CaseInfo
+  description: '-
+
+    -'
+  headers:
+    AuthToken: '{token}'
+  method: GET
+  name: For me_manager /me_manager/nft
+  parameters: {}
+  url: /me_manager/nft
 50c9f532bc59a5d191b96a91bcd2d852: !!python/object:__main__.CaseInfo
   description: '-
 
@@ -136,8 +142,7 @@
     AuthToken: '{token}'
   method: POST
   name: For me_manager /me_manager/userAddress
-  parameters:
-    RequestBody: UserAddress info
+  parameters: {}
   url: /me_manager/userAddress
 57b791c2dd22dcbab1d2277587bb9734: !!python/object:__main__.CaseInfo
   description: '-'
@@ -145,8 +150,7 @@
     AuthToken: '{token}'
   method: POST
   name: For admin /admin/staff
-  parameters:
-    RequestBody: user info
+  parameters: {}
   url: /admin/staff
 584400de6823c404e042c9002a4806cb: !!python/object:__main__.CaseInfo
   description: '-
@@ -156,9 +160,16 @@
     AuthToken: '{token}'
   method: DELETE
   name: For admin /admin/content
-  parameters:
-    RequestBody: content info
+  parameters: {}
   url: /admin/content
+5b7eaddefc57b57278b5a5b1b9958156: !!python/object:__main__.CaseInfo
+  description: '-'
+  headers:
+    AuthToken: '{token}'
+  method: POST
+  name: For me_manager /me_manager/UserSign
+  parameters: {}
+  url: /me_manager/UserSign/sign_up
 6869cbf4530638e81365206520a95ef2: !!python/object:__main__.CaseInfo
   description: '-
 
@@ -167,8 +178,7 @@
     AuthToken: '{token}'
   method: GET
   name: For admin /admin/role
-  parameters:
-    RequestBody: role info
+  parameters: {}
   url: /admin/role
 6a8973d0ae9018165f277e6d9ecf00eb: !!python/object:__main__.CaseInfo
   description: '-
@@ -178,8 +188,7 @@
     AuthToken: '{token}'
   method: DELETE
   name: For me_manager /me_manager/group
-  parameters:
-    RequestBody: Group info
+  parameters: {}
   url: /me_manager/group
 6bbe612443c5783553e2c4a174c7097d: !!python/object:__main__.CaseInfo
   description: '- swith Kyc query/update  method [get/put]
@@ -189,8 +198,7 @@
     AuthToken: '{token}'
   method: POST
   name: For admin /admin/kyc
-  parameters:
-    RequestBody: Kyc info
+  parameters: {}
   url: /admin/kyc
 6f31065b894823fb00d2272608425457: !!python/object:__main__.CaseInfo
   description: '-'
@@ -198,8 +206,7 @@
     AuthToken: '{token}'
   method: DELETE
   name: For admin /admin/staff
-  parameters:
-    RequestBody: user info
+  parameters: {}
   url: /admin/staff
 7b0c707a57543b267f35f05dfc9e880c: !!python/object:__main__.CaseInfo
   description: '-
@@ -209,18 +216,8 @@
     AuthToken: '{token}'
   method: GET
   name: For admin /admin/content
-  parameters:
-    RequestBody: content info
+  parameters: {}
   url: /normal/content
-7ce920cc04d34aa42cfdf7b768b077fe: !!python/object:__main__.CaseInfo
-  description: '-'
-  headers:
-    AuthToken: '{token}'
-  method: POST
-  name: For me_manager /me_manager/users
-  parameters:
-    RequestBody: User info
-  url: /me_manager/user/sign_in
 7f4a0ddbf9118141838e7a788caf3870: !!python/object:__main__.CaseInfo
   description: '-
 
@@ -229,8 +226,7 @@
     AuthToken: '{token}'
   method: GET
   name: For admin /admin/group
-  parameters:
-    RequestBody: Group info
+  parameters: {}
   url: /admin/group
 989c58d3f0a3cb9cf82426e90094ab25: !!python/object:__main__.CaseInfo
   description: '-
@@ -240,8 +236,7 @@
     AuthToken: '{token}'
   method: POST
   name: For admin /admin/content
-  parameters:
-    RequestBody: content info
+  parameters: {}
   url: /admin/content
 9ac1161f8c2f9ace340dc93ab825ff39: !!python/object:__main__.CaseInfo
   description: '-
@@ -251,8 +246,7 @@
     AuthToken: '{token}'
   method: POST
   name: For admin /admin/language
-  parameters:
-    RequestBody: Language
+  parameters: {}
   url: /admin/language
 9f18f0112df6656270b062e57aaa8c3e: !!python/object:__main__.CaseInfo
   description: '-
@@ -262,8 +256,7 @@
     AuthToken: '{token}'
   method: PUT
   name: For admin /admin/page
-  parameters:
-    RequestBody: Page
+  parameters: {}
   url: /admin/page
 a71f64385391362c85ae1210ae8d19ba: !!python/object:__main__.CaseInfo
   description: '-
@@ -273,8 +266,7 @@ a71f64385391362c85ae1210ae8d19ba: !!python/object:__main__.CaseInfo
     AuthToken: '{token}'
   method: POST
   name: For admin /admin/page
-  parameters:
-    RequestBody: Page
+  parameters: {}
   url: /admin/page
 a7caaea423da6fa768e790581ab9485f: !!python/object:__main__.CaseInfo
   description: '-
@@ -284,8 +276,7 @@ a7caaea423da6fa768e790581ab9485f: !!python/object:__main__.CaseInfo
     AuthToken: '{token}'
   method: DELETE
   name: For me_manager /me_manager/member
-  parameters:
-    RequestBody: Member info
+  parameters: {}
   url: /me_manager/member
 b417d565c9663a79f3d26b74c74dde3a: !!python/object:__main__.CaseInfo
   description: '-
@@ -295,8 +286,7 @@ b417d565c9663a79f3d26b74c74dde3a: !!python/object:__main__.CaseInfo
     AuthToken: '{token}'
   method: DELETE
   name: For admin /admin/role
-  parameters:
-    RequestBody: role info
+  parameters: {}
   url: /admin/role
 c24546efb224ef91eeb56b75aa497d3a: !!python/object:__main__.CaseInfo
   description: '-
@@ -306,9 +296,28 @@ c24546efb224ef91eeb56b75aa497d3a: !!python/object:__main__.CaseInfo
     AuthToken: '{token}'
   method: GET
   name: For admin /admin/project
-  parameters:
-    RequestBody: Project
+  parameters: {}
   url: /normal/project
+cc5bd5477a34d85e3e76237e9b21334a: !!python/object:__main__.CaseInfo
+  description: '-
+
+    -'
+  headers:
+    AuthToken: '{token}'
+  method: DELETE
+  name: For me_manager /me_manager/nft
+  parameters: {}
+  url: /admin/nft
+cda91f07fd2b39ffef0881b6dbec50b4: !!python/object:__main__.CaseInfo
+  description: '-
+
+    -'
+  headers:
+    AuthToken: '{token}'
+  method: PUT
+  name: For me_manager /me_manager/nft
+  parameters: {}
+  url: /admin/nft
 cdc291312745ae316522b40c2aa9f76c: !!python/object:__main__.CaseInfo
   description: '-
 
@@ -317,8 +326,7 @@ cdc291312745ae316522b40c2aa9f76c: !!python/object:__main__.CaseInfo
     AuthToken: '{token}'
   method: DELETE
   name: For admin /admin/project
-  parameters:
-    RequestBody: Project
+  parameters: {}
   url: /admin/project
 d15a0138e904d7dcd4b877616ea18de0: !!python/object:__main__.CaseInfo
   description: '-'
@@ -326,8 +334,7 @@ d15a0138e904d7dcd4b877616ea18de0: !!python/object:__main__.CaseInfo
     AuthToken: '{token}'
   method: GET
   name: For admin /admin/staff
-  parameters:
-    RequestBody: user info
+  parameters: {}
   url: /admin/staff
 d5d8c71cfad973b70a023db56a630e91: !!python/object:__main__.CaseInfo
   description: '-
@@ -337,8 +344,7 @@ d5d8c71cfad973b70a023db56a630e91: !!python/object:__main__.CaseInfo
     AuthToken: '{token}'
   method: POST
   name: For me_manager /me_manager/member
-  parameters:
-    RequestBody: Member info
+  parameters: {}
   url: /me_manager/member
 e0509858c4df2d70551b20edc7085df5: !!python/object:__main__.CaseInfo
   description: '-
@@ -348,8 +354,7 @@ e0509858c4df2d70551b20edc7085df5: !!python/object:__main__.CaseInfo
     AuthToken: '{token}'
   method: GET
   name: For admin /admin/page
-  parameters:
-    RequestBody: Page
+  parameters: {}
   url: /normal/page
 e504df6039349211dae5ca82e4f94fe3: !!python/object:__main__.CaseInfo
   description: '-'
@@ -357,8 +362,7 @@ e504df6039349211dae5ca82e4f94fe3: !!python/object:__main__.CaseInfo
     AuthToken: '{token}'
   method: POST
   name: For admin /admin/login
-  parameters:
-    RequestBody: user info
+  parameters: {}
   url: /admin/login
 e6b3a3db3280f53b4232806e5bd7de14: !!python/object:__main__.CaseInfo
   description: '- swith Kyc query/update  method [get/put]
@@ -368,8 +372,7 @@ e6b3a3db3280f53b4232806e5bd7de14: !!python/object:__main__.CaseInfo
     AuthToken: '{token}'
   method: GET
   name: For admin /admin/kyc
-  parameters:
-    RequestBody: Kyc info
+  parameters: {}
   url: /admin/kyc
 e72ae46cf3fd6ef6a5e30dcf27937993: !!python/object:__main__.CaseInfo
   description: '-
@@ -379,8 +382,7 @@ e72ae46cf3fd6ef6a5e30dcf27937993: !!python/object:__main__.CaseInfo
     AuthToken: '{token}'
   method: PUT
   name: For admin /admin/content
-  parameters:
-    RequestBody: content info
+  parameters: {}
   url: /admin/content
 eed93098f588d6540d89d04e02e5c6e9: !!python/object:__main__.CaseInfo
   description: '-
@@ -390,8 +392,7 @@ eed93098f588d6540d89d04e02e5c6e9: !!python/object:__main__.CaseInfo
     AuthToken: '{token}'
   method: PUT
   name: For admin /admin/language
-  parameters:
-    RequestBody: Language
+  parameters: {}
   url: /admin/language
 ef67ce022619ab7bdb1b74abcb3b49b3: !!python/object:__main__.CaseInfo
   description: '-
@@ -401,8 +402,7 @@ ef67ce022619ab7bdb1b74abcb3b49b3: !!python/object:__main__.CaseInfo
     AuthToken: '{token}'
   method: PUT
   name: For admin /admin/group
-  parameters:
-    RequestBody: Group info
+  parameters: {}
   url: /admin/group
 f967f06bc1e7c0b69493fc6162e1953a: !!python/object:__main__.CaseInfo
   description: '-
@@ -412,15 +412,5 @@ f967f06bc1e7c0b69493fc6162e1953a: !!python/object:__main__.CaseInfo
     AuthToken: '{token}'
   method: GET
   name: For me_manager /me_manager/group
-  parameters:
-    RequestBody: Group info
+  parameters: {}
   url: /me_manager/group
-fd52233bd47777083257ef223d3a151c: !!python/object:__main__.CaseInfo
-  description: '-'
-  headers:
-    AuthToken: '{token}'
-  method: POST
-  name: For me_manager /me_manager/users
-  parameters:
-    RequestBody: User info
-  url: /me_manager/user/sign_up

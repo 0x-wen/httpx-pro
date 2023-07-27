@@ -9,6 +9,7 @@ from common.http_client import client
 
 @dataclass
 class CaseInfo:
+    """dataclass数据类装饰器，将类变成数据类，不需要去定义类的__init__,__eq__,__repr__都会自动添加"""
     name: str
     description: str
     url: str
@@ -26,6 +27,7 @@ class API(object):
         return interfaces
 
     def extract_case_info(self, swagger_data: dict) -> dict[str, CaseInfo]:
+        """提取请求信息，这个应该是把swagger的paths里的各种请求方法转成dict"""
         cases_info = dict()
         for path, methods in swagger_data.items():
             for method, method_data in methods.items():
@@ -57,7 +59,12 @@ class API(object):
 api = API()
 cases_info = api.generate_cases()
 
-if __name__ == '__main__':
-    api.case_file_bp()
-    print(f"Total interface use cases:{len(cases_info)}")
-    print("1111111")
+# if __name__ == '__main__':
+#     api.case_file_bp()
+#     print(f"Total interface use cases:{len(cases_info)}")
+#
+#
+
+    # print("1111111")
+    # c = CaseInfo(name="as", description="a", url="asd", method="as", headers={"a": "1"}, parameters={"as": "asd"})
+    # print(c)
