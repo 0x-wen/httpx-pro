@@ -1,0 +1,422 @@
+003f21857fb966145c7f74ac7224a1f4: !!python/object:__main__.CaseInfo
+  description: '-'
+  headers:
+    AuthToken: '{token}'
+  method: POST
+  name: For admin /admin/role
+  parameters: {}
+  url: /admin/role
+05d8cb4052516831cb16770fcb5e9986: !!python/object:__main__.CaseInfo
+  description: '- query language
+
+    -'
+  headers: {}
+  method: GET
+  name: For user /user/language
+  parameters: {}
+  url: /normal/language
+07d169b10edfafcab8dcf1fae594422e: !!python/object:__main__.CaseInfo
+  description: '- delete group
+
+    -'
+  headers:
+    AuthToken: '{token}'
+  method: DELETE
+  name: For user /user/group
+  parameters: {}
+  url: /user/group
+084ad9e1c71c2de9553a93ec48e4fc2e: !!python/object:__main__.CaseInfo
+  description: '-  update project'
+  headers:
+    AuthToken: '{token}'
+  method: PUT
+  name: For admin /admin/project
+  parameters: {}
+  url: /admin/project
+0bec8d1ed2134905fbed8b3fe5d6f35e: !!python/object:__main__.CaseInfo
+  description: '- delete language'
+  headers:
+    AuthToken: '{token}'
+  method: DELETE
+  name: For admin /admin/language
+  parameters: {}
+  url: /admin/language
+1480c51deb1a00ebd890f45ecd6ac14a: !!python/object:__main__.CaseInfo
+  description: '- delete page
+
+    -'
+  headers:
+    AuthToken: '{token}'
+  method: DELETE
+  name: For admin /admin/page
+  parameters: {}
+  url: /admin/page
+1b1a21a26ad90ea2c65ec19fc72a62fb: !!python/object:__main__.CaseInfo
+  description: '- query group'
+  headers:
+    AuthToken: '{token}'
+  method: GET
+  name: For user /user/group
+  parameters: {}
+  url: /user/group
+1f8a11695cddae935ca95044ef1fbdd0: !!python/object:__main__.CaseInfo
+  description: '- user query group info
+
+    -'
+  headers:
+    AuthToken: '{token}'
+  method: GET
+  name: For user /user/member
+  parameters: {}
+  url: /user/member
+2399a4686e5339df49054e656697998b: !!python/object:__main__.CaseInfo
+  description: '- query self kyc info'
+  headers:
+    AuthToken: '{token}'
+  method: GET
+  name: For user /user/kyc
+  parameters: {}
+  url: /user/kyc
+257055bc79f0487ce606166e1b793f2d: !!python/object:__main__.CaseInfo
+  description: '-'
+  headers:
+    AuthToken: '{token}'
+  method: PUT
+  name: For admin /admin/role
+  parameters: {}
+  url: /admin/role
+2696b44db0098da43f4e3f4a7b4e30c3: !!python/object:__main__.CaseInfo
+  description: '- swith Kyc query/update  method [get/put]
+
+    - if method is PUT, just update kyc_data field'
+  headers:
+    AuthToken: '{token}'
+  method: PUT
+  name: For admin /admin/kyc
+  parameters: {}
+  url: /admin/kyc
+2b3edfd4d56ce0d569e33d5d31893e76: !!python/object:__main__.CaseInfo
+  description: '-  sign in.'
+  headers: {}
+  method: POST
+  name: For user /user/sign_in
+  parameters: {}
+  url: /user/sign_in
+2ca0e8a6cd6e6fc6fba5600eb28eec62: !!python/object:__main__.CaseInfo
+  description: '- create group'
+  headers:
+    AuthToken: '{token}'
+  method: POST
+  name: For user /user/group
+  parameters: {}
+  url: /user/group
+2fccbb4c129411899a0c706b732a02dc: !!python/object:__main__.CaseInfo
+  description: '-'
+  headers:
+    AuthToken: '{token}'
+  method: GET
+  name: For user /me_manager/staff
+  parameters: {}
+  url: /user/nft
+37dd4c9be6bcf89b7b58df283f2a2cda: !!python/object:__main__.CaseInfo
+  description: '- add user address'
+  headers:
+    AuthToken: '{token}'
+  method: POST
+  name: For user /user/userAddress
+  parameters: {}
+  url: /user/createAddress
+39a0316867183fa5d2c1936563dfce5d: !!python/object:__main__.CaseInfo
+  description: '- query language
+
+    -'
+  headers:
+    AuthToken: '{token}'
+  method: GET
+  name: For admin /admin/language
+  parameters: {}
+  url: /admin/language
+40a2045c9fed0a5a04a523129a9f659c: !!python/object:__main__.CaseInfo
+  description: '-'
+  headers:
+    AuthToken: '{token}'
+  method: POST
+  name: For user /me_manager/nft
+  parameters: {}
+  url: /user/nft
+43dcf03979b24bf2ba4c2cd48884654d: !!python/object:__main__.CaseInfo
+  description: '- query content
+
+    -'
+  headers:
+    AuthToken: '{token}'
+  method: GET
+  name: For admin /admin/content
+  parameters: {}
+  url: /admin/content
+44c36c7d3fe5da033f41f0b94bfbaed1: !!python/object:__main__.CaseInfo
+  description: '-'
+  headers:
+    AuthToken: '{token}'
+  method: PUT
+  name: For admin /admin/staff
+  parameters: {}
+  url: /admin/staff
+4dd88cda7b6f7577cb6d20488c1765b4: !!python/object:__main__.CaseInfo
+  description: '-  create project
+
+    -  only input token and name param'
+  headers:
+    AuthToken: '{token}'
+  method: POST
+  name: For admin /admin/project
+  parameters: {}
+  url: /admin/project
+56a6b9dd548d8d9c56622ce431821c1e: !!python/object:__main__.CaseInfo
+  description: '-  sign up'
+  headers: {}
+  method: POST
+  name: For user /user/sign_up
+  parameters: {}
+  url: /user/sign_up
+57b791c2dd22dcbab1d2277587bb9734: !!python/object:__main__.CaseInfo
+  description: '-'
+  headers:
+    AuthToken: '{token}'
+  method: POST
+  name: For admin /admin/staff
+  parameters: {}
+  url: /admin/staff
+584400de6823c404e042c9002a4806cb: !!python/object:__main__.CaseInfo
+  description: '- delete content
+
+    -'
+  headers:
+    AuthToken: '{token}'
+  method: DELETE
+  name: For admin /admin/content
+  parameters: {}
+  url: /admin/content
+60e044ee91459b4de0d8c3c9350f8921: !!python/object:__main__.CaseInfo
+  description: '- admin query group info
+
+    -'
+  headers:
+    AuthToken: '{token}'
+  method: GET
+  name: For admin /admin/member
+  parameters: {}
+  url: /admin/member
+6324d796b4ebc42a5f8916ebfa8681db: !!python/object:__main__.CaseInfo
+  description: '-  query project'
+  headers:
+    AuthToken: '{token}'
+  method: GET
+  name: For admin /admin/project
+  parameters: {}
+  url: /admin/project
+6869cbf4530638e81365206520a95ef2: !!python/object:__main__.CaseInfo
+  description: '-'
+  headers:
+    AuthToken: '{token}'
+  method: GET
+  name: For admin /admin/role
+  parameters: {}
+  url: /admin/role
+6bbe612443c5783553e2c4a174c7097d: !!python/object:__main__.CaseInfo
+  description: '- swith Kyc query/update  method [get/put]
+
+    - if method is PUT, just update kyc_data field'
+  headers:
+    AuthToken: '{token}'
+  method: POST
+  name: For admin /admin/kyc
+  parameters: {}
+  url: /admin/kyc
+6f31065b894823fb00d2272608425457: !!python/object:__main__.CaseInfo
+  description: '-'
+  headers:
+    AuthToken: '{token}'
+  method: DELETE
+  name: For admin /admin/staff
+  parameters: {}
+  url: /admin/staff
+7b0c707a57543b267f35f05dfc9e880c: !!python/object:__main__.CaseInfo
+  description: '- query content'
+  headers: {}
+  method: GET
+  name: For user /user/content
+  parameters: {}
+  url: /normal/content
+7f4a0ddbf9118141838e7a788caf3870: !!python/object:__main__.CaseInfo
+  description: '-'
+  headers:
+    AuthToken: '{token}'
+  method: GET
+  name: For admin /admin/group
+  parameters: {}
+  url: /admin/group
+87b85b1012c7738219006aee61fb5008: !!python/object:__main__.CaseInfo
+  description: '- user join group
+
+    -'
+  headers:
+    AuthToken: '{token}'
+  method: POST
+  name: For user /user/member
+  parameters: {}
+  url: /user/member
+989c58d3f0a3cb9cf82426e90094ab25: !!python/object:__main__.CaseInfo
+  description: '- create content'
+  headers:
+    AuthToken: '{token}'
+  method: POST
+  name: For admin /admin/content
+  parameters: {}
+  url: /admin/content
+9ac1161f8c2f9ace340dc93ab825ff39: !!python/object:__main__.CaseInfo
+  description: '- create language'
+  headers:
+    AuthToken: '{token}'
+  method: POST
+  name: For admin /admin/language
+  parameters: {}
+  url: /admin/language
+9f18f0112df6656270b062e57aaa8c3e: !!python/object:__main__.CaseInfo
+  description: '- update page
+
+    -'
+  headers:
+    AuthToken: '{token}'
+  method: PUT
+  name: For admin /admin/page
+  parameters: {}
+  url: /admin/page
+a71f64385391362c85ae1210ae8d19ba: !!python/object:__main__.CaseInfo
+  description: '- create page
+
+    - input project id and page name'
+  headers:
+    AuthToken: '{token}'
+  method: POST
+  name: For admin /admin/page
+  parameters: {}
+  url: /admin/page
+b417d565c9663a79f3d26b74c74dde3a: !!python/object:__main__.CaseInfo
+  description: '-'
+  headers:
+    AuthToken: '{token}'
+  method: DELETE
+  name: For admin /admin/role
+  parameters: {}
+  url: /admin/role
+c24546efb224ef91eeb56b75aa497d3a: !!python/object:__main__.CaseInfo
+  description: '-  query project'
+  headers: {}
+  method: GET
+  name: For user /user/project
+  parameters: {}
+  url: /normal/project
+cacfb63e75806ff55e73344366987adc: !!python/object:__main__.CaseInfo
+  description: '- user quit group
+
+    -'
+  headers:
+    AuthToken: '{token}'
+  method: DELETE
+  name: For user /user/member
+  parameters: {}
+  url: /user/member
+cc5bd5477a34d85e3e76237e9b21334a: !!python/object:__main__.CaseInfo
+  description: '-'
+  headers:
+    AuthToken: '{token}'
+  method: DELETE
+  name: For admin /admin/nft
+  parameters: {}
+  url: /admin/nft
+cda91f07fd2b39ffef0881b6dbec50b4: !!python/object:__main__.CaseInfo
+  description: '-'
+  headers:
+    AuthToken: '{token}'
+  method: PUT
+  name: For admin /admin/nft
+  parameters: {}
+  url: /admin/nft
+cdc291312745ae316522b40c2aa9f76c: !!python/object:__main__.CaseInfo
+  description: '- delete project'
+  headers:
+    AuthToken: '{token}'
+  method: DELETE
+  name: For admin /admin/project
+  parameters: {}
+  url: /admin/project
+d15a0138e904d7dcd4b877616ea18de0: !!python/object:__main__.CaseInfo
+  description: '-'
+  headers:
+    AuthToken: '{token}'
+  method: GET
+  name: For admin /admin/staff
+  parameters: {}
+  url: /admin/staff
+df6b77da7b7e662d40b1f59f06c2265d: !!python/object:__main__.CaseInfo
+  description: '- query page by project id
+
+    -'
+  headers:
+    AuthToken: '{token}'
+  method: GET
+  name: For admin /admin/page
+  parameters: {}
+  url: /admin/page
+e0509858c4df2d70551b20edc7085df5: !!python/object:__main__.CaseInfo
+  description: '- query page
+
+    -'
+  headers: {}
+  method: GET
+  name: For user /user/page
+  parameters: {}
+  url: /normal/page
+e504df6039349211dae5ca82e4f94fe3: !!python/object:__main__.CaseInfo
+  description: '-'
+  headers:
+    AuthToken: '{token}'
+  method: POST
+  name: For admin /admin/login
+  parameters: {}
+  url: /admin/login
+e6b3a3db3280f53b4232806e5bd7de14: !!python/object:__main__.CaseInfo
+  description: '- swith Kyc query/update  method [get/put]
+
+    - if method is PUT, just update kyc_data field'
+  headers:
+    AuthToken: '{token}'
+  method: GET
+  name: For admin /admin/kyc
+  parameters: {}
+  url: /admin/kyc
+e72ae46cf3fd6ef6a5e30dcf27937993: !!python/object:__main__.CaseInfo
+  description: '- update content'
+  headers:
+    AuthToken: '{token}'
+  method: PUT
+  name: For admin /admin/content
+  parameters: {}
+  url: /admin/content
+eed93098f588d6540d89d04e02e5c6e9: !!python/object:__main__.CaseInfo
+  description: '- update language'
+  headers:
+    AuthToken: '{token}'
+  method: PUT
+  name: For admin /admin/language
+  parameters: {}
+  url: /admin/language
+ef67ce022619ab7bdb1b74abcb3b49b3: !!python/object:__main__.CaseInfo
+  description: '-'
+  headers:
+    AuthToken: '{token}'
+  method: PUT
+  name: For admin /admin/group
+  parameters: {}
+  url: /admin/group
