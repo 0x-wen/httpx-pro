@@ -3,7 +3,6 @@ import httpx
 from loguru import logger
 from singleton.singleton import Singleton
 
-from apps.me_manage.api.api import CaseInfo
 
 
 @Singleton
@@ -23,7 +22,7 @@ class HttpxClient(object):
         response = None
         try:
             response = self.client.request(method, url, **kwargs)
-            logger.info(f"url = {response.url}")
+            # logger.info(f"url = {response.url}")
             # logger.info(f"kwargs = {kwargs}")
             response.raise_for_status()
         except httpx.HTTPError as exc:

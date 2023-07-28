@@ -20,12 +20,12 @@ class Manage(CaseInfo):
         login_data = dict(method=login.method, url=login.url, json=login.parameters)
         login_res = client.do_request(**login_data).json()
         token = login_res['data']['token']
-        logger.info(f"测试：token=：{token}")
+        # logger.info(f"测试：token=：{token}")
         return token
 
     class Role(object):
         @staticmethod
-        def role_id_get(role_name: str, info=False):
+        def role_id_get(role_name: str, info=False, token=None):
             """
             根据角色名称，取得角色id
             :param role_name: 角色名称
@@ -33,16 +33,19 @@ class Manage(CaseInfo):
             :return 角色id
             """
             # 管理员登录
-            token = Manage._token()
+            if token is None:
+                admin_token = Manage._token()
+            else:
+                admin_token = token
             # 查询根据名称查询角色Id
             role = cases_info.get('6869cbf4530638e81365206520a95ef2')
-            role.headers = dict(AuthToken=token)
+            role.headers = dict(AuthToken=admin_token)
             # 返回角色id
             role_data = dict(method=role.method, url=role.url, headers=role.headers)
             role_res = client.do_request(**role_data).json()['data']
             logger.info(f"role_res={role_res}")
             role_id_list = [i['v0'] for i in role_res if i['v3'] == role_name]
-            logger.info(f"role_id_list={role_id_list}")
+            # logger.info(f"role_id_list={role_id_list}")
             role_id_str = ""
             if role_id_list == []:
                 role_id_str = "查不到改用户，请检查一下用户名称是不是输入错了,也有可能是角色什么权限都没有"
@@ -60,17 +63,21 @@ class Manage(CaseInfo):
             # return role_id_str
 
         @staticmethod
-        def role_info_get(role_name: str):
+        def role_info_get(role_name: str, token=None):
             """
-            根据角色名称，取得角色id
+            根据角色名称，取得角色信息，不常用
+            :param token 默认是管理员的 token
             :param role_name: 角色名称
-            :return 角色id
+            :return 角色信息
             """
             # 管理员登录
-            token = Manage._token()
+            if token is None:
+                admin_token = Manage._token()
+            else:
+                admin_token = token
             # 查询根据名称查询角色Id
             role = cases_info.get('6869cbf4530638e81365206520a95ef2')
-            role.headers = dict(AuthToken=token)
+            role.headers = dict(AuthToken=admin_token)
 
             # 返回角色id
             role_data_id = dict(method=role.method, url=role.url, headers=role.headers)
@@ -91,11 +98,43 @@ class Manage(CaseInfo):
             #     return role_id[0]
 
         @staticmethod
-        def role_creat(role_name: str, kyc=False, group=False, staff=False, role=False, project=False, page=False,
+        def role_get_all(token=None):
+            """
+            不需要传参，查询所有角色信息
+            :param token: 默认是管理员的token，
+            :return 角色信息
+            """
+            # 管理员登录
+            if token is None:
+                admin_token = Manage._token()
+            else:
+                admin_token = token
+            # 查询根据名称查询角色Id
+            role = cases_info.get('6869cbf4530638e81365206520a95ef2')
+            role.headers = dict(AuthToken=admin_token)
+
+            # 返回角色id
+            role_data_id = dict(method=role.method, url=role.url, headers=role.headers)
+            role_res = client.do_request(**role_data_id).json()['data']
+            logger.info(f"role_res={role_res}")
+            # role_id = [i['v0'] for i in role_res if i['v3'] == role_name]
+            # logger.info(f"role_id={role_id}")
+            # role.parameters = "role_id="+role_id[0]
+            # role.parameters = None
+            # role_data_info = dict(method=role.method, url=role.url, headers=role.headers, params=role.parameters)
+            # role_info_res = client.do_request(**role_data_info).json()['data']
+
+            # logger.info(f"role_info_res={role_info_res}")
+            return role_res
+
+        @staticmethod
+        def role_creat(role_name: str, token=None, kyc=False, group=False, staff=False, role=False, project=False,
+                       page=False,
                        language=False, content=False):
             """
             创建一个角色，必须要传角色名，其他的参数如果是Ture就是打开对于权限
             :param role_name: 角色名称
+            :param token: 默认是使用管理员的token，
             :param kyc: 用户管理权限
             :param group: 群组管理权限
             :param staff: 员工管理权限
@@ -107,10 +146,13 @@ class Manage(CaseInfo):
             :return: 角色id给下一个接口用，如果创建失败，返回None
             """
             # 拿到管理员token
-            token = Manage._token()
-            # 管理员创建角色，传入相关权限
+            if token is None:
+                admin_token = Manage._token()
+            else:
+                admin_token = token
+                # 管理员创建角色，传入相关权限
             role_case: CaseInfo = cases_info.get('003f21857fb966145c7f74ac7224a1f4')
-            role_case.headers = dict(AuthToken=token)
+            role_case.headers = dict(AuthToken=admin_token)
             # role_name = "role_name_test444"
 
             role_case.parameters = {"role_name": role_name, "role_list": []}
@@ -177,17 +219,21 @@ class Manage(CaseInfo):
             logger.info(f"role_res = {role_res}")
             # 查询角色,拿到角色id 再返回出去
             role_id = Manage.Role.role_id_get(role_name=role_name)
-            logger.info(f"role_le={role_id},type={type(role_id)}")
+            # logger.info(f"role_le={role_id},type={type(role_id)}")
             return role_id
 
         @staticmethod
-        def role_put(role_name: str, kyc=False, group=False, staff=False, role=False, project=False, page=False,
+        def role_put(role_name: str, token=None, kyc=False, group=False, staff=False, role=False, project=False,
+                     page=False,
                      language=False, content=False):
             # 根据角色名称改变角色的权限
             # 拿到管理员token
-            token = Manage._token()
+            if token is None:
+                admin_token = Manage._token()
+            else:
+                admin_token = token
             role_case: CaseInfo = cases_info.get('257055bc79f0487ce606166e1b793f2d')
-            role_case.headers = dict(AuthToken=token)
+            role_case.headers = dict(AuthToken=admin_token)
             # role_name = "role_name_test444"
             # 查询角色,拿到角色id 再返回出去
             role_id = Manage.Role.role_id_get(role_name=role_name)
@@ -262,12 +308,15 @@ class Manage(CaseInfo):
             # pass
 
         @staticmethod
-        def role_delete(role_name=None):
+        def role_delete(role_name=None, token=None):
             # 管理员登录
-            token = Manage._token()
+            if token is None:
+                admin_token = Manage._token()
+            else:
+                admin_token = token
             # 查询根据名称查询角色Id
             role = cases_info.get('b417d565c9663a79f3d26b74c74dde3a')
-            role.headers = dict(AuthToken=token)
+            role.headers = dict(AuthToken=admin_token)
 
             # 通过名字，拿到角色id
             role_id = Manage.Role.role_id_get(role_name=role_name)
@@ -282,12 +331,15 @@ class Manage(CaseInfo):
 
     class Staff(object):
         @staticmethod
-        def staff_or_id_get(account=None):
-            token = Manage._token()
+        def staff_or_id_get(account=None, token=None):
+            if token is None:
+                admin_token = Manage._token()
+            else:
+                admin_token = token
 
             staff = cases_info.get('d15a0138e904d7dcd4b877616ea18de0')
             # 定义请求 参数就可以
-            staff.headers = dict(AuthToken=token)
+            staff.headers = dict(AuthToken=admin_token)
             page_and_size = "page=1&page_size=100000"
             role_data_info = dict(method=staff.method, url=staff.url, headers=staff.headers, params=page_and_size)
             role_info_res = client.do_request(**role_data_info).json()
@@ -302,16 +354,25 @@ class Manage(CaseInfo):
                 return role_info_res
 
         @staticmethod
-        def staff_post(role_id, account):
+        def staff_post(role_id, account, token=None):
+            """
+            新建一个用户，给他赋予对应角色id的权限
+            :param role_id: 角色id
+            :param account: 用户名称
+            :return: 暂时没有返回
+            """
             # 拿token登录
-            token = Manage._token()
+            if token is None:
+                admin_token = Manage._token()
+            else:
+                admin_token = token
             # 拿角色id
             # role_id = "e78c4ec2-676a-4024-93de-a21489daada3"
             # account="wang123123123211"
             # 定义接口传参
             staff = cases_info.get('57b791c2dd22dcbab1d2277587bb9734')
-            staff.headers = dict(AuthToken=token)
-            staff.parameters = {"name": "汪汪汪汪汪2", "account": account, "pwd": "111111",
+            staff.headers = dict(AuthToken=admin_token)
+            staff.parameters = {"name": "自动化测试用的", "account": account, "pwd": "111111",
                                 "role_id": role_id, "is_actived": "1",
                                 "phone": "131111111111", "comment": "123123123"}
             staff_data = dict(method=staff.method, url=staff.url, headers=staff.headers, json=staff.parameters)
@@ -321,16 +382,18 @@ class Manage(CaseInfo):
             pass
 
         @staticmethod
-        def staff_put(role_id, account, comment):
+        def staff_put(role_id, account, comment, token=None):
             # 拿token登录
-            token = Manage._token()
-            # 拿角色id
+            if token is None:
+                admin_token = Manage._token()
+            else:
+                admin_token = token
             # account="wang12312312321asdas"
             # role_id = "e78c4ec2-676a-4024-93de-a21489daada3"
             # id = Manage.Staff.get_staff_or_id(account=account)
             # 定义接口传参
             staff = cases_info.get('44c36c7d3fe5da033f41f0b94bfbaed1')
-            staff.headers = dict(AuthToken=token)
+            staff.headers = dict(AuthToken=admin_token)
             staff.parameters = {"name": "汪汪汪汪汪2", "portrait": "", "account": account,
                                 "role_id": role_id, "is_actived": "1",
                                 "phone": "13111111111", "comment": comment, "ID": 55}
@@ -341,12 +404,15 @@ class Manage(CaseInfo):
             return account
 
         @staticmethod
-        def staff_delete(account: str):
-            token = Manage._token()
+        def staff_delete(account: str, token=None):
+            if token is None:
+                admin_token = Manage._token()
+            else:
+                admin_token = token
 
             staff = cases_info.get('6f31065b894823fb00d2272608425457')
             # 定义请求 参数就可以
-            staff.headers = dict(AuthToken=token)
+            staff.headers = dict(AuthToken=admin_token)
             page_and_size = "account=" + account
             role_data_info = dict(method=staff.method, url=staff.url, headers=staff.headers, params=page_and_size)
             role_info_res = client.do_request(**role_data_info).json()
@@ -555,3 +621,4 @@ if __name__ == '__main__':
     # Manage.Staff.post_staff()
     # Manage.Staff.delete_staff(account="wang1231231232")
     # Manage.Staff.put_staff(comment="测试一下！1111！")
+    print(Manage.Role.role_get_all())

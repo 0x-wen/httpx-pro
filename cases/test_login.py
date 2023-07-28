@@ -48,7 +48,7 @@ class TestLogin:
         assert res['code'] == 40002
         assert "The user don't register, please check again!" in res['message']
 
-    @pytest.mark.parametrize("tast_data_yml", read_yaml("../datas/login_data/test_data_login_list.yml"))
+    @pytest.mark.parametrize("tast_data_yml", read_yaml("../apps/me_manage/datas/login_data/test_data_login_list.yml"))
     def test_login_inexistence_yml(self, tast_data_yml):
         """不存在的用户，yml文件参数化"""
 
@@ -67,7 +67,8 @@ class TestLogin:
         assert "The user don't register, please check again!" in res['message']
         # assert 1==1
 
-    @pytest.mark.parametrize("tast_data_json", read_json("../datas/login_data/test_data_login_list.json"))
+    @pytest.mark.parametrize("tast_data_json", read_json(
+        "../apps/me_manage/datas/login_data/test_data_login_list.json"))
     def test_login_inexistence_json(self, tast_data_json):
         """不存在的用户，json文件参数化"""
 
