@@ -59,9 +59,9 @@ class API(object):
 api = API()
 cases_info = api.generate_cases()
 
-# if __name__ == '__main__':
-#     api.case_file_bp()
-#     print(f"Total interface use cases:{len(cases_info)}")
+if __name__ == '__main__':
+    api.case_file_bp()
+    print(f"Total interface use cases:{len(cases_info)}")
 #
 #
 
