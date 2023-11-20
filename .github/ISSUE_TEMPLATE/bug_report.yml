@@ -9,52 +9,12 @@ body:
       options:
         - label: I have searched the existing issues
           required: true
-
-  - type: checkboxes
+  
+  - type: input
     attributes:
-      label: This report is about a single actionable bug.
-      description: Please create one issue per bug, split up your bug reports if needed.
-      options:
-        - label: I'm reporting a single actionable bug
-          required: true
-
-  - type: checkboxes
-    attributes:
-      label: This report is about the ProGit book, version 2, English language.
-      description: Bug reports about translations or the first version of the book are not accepted.
-      options:
-        - label: This bug is not about a translation or old version
-          required: true
-
-  - type: checkboxes
-    attributes:
-      label: Bug covers book website/pdf
-      description: This bug is about the book as found on the [website](https://www.git-scm.com/book/en/v2) or the PDF.
-      options:
-        - label: I confirm the bug is about the book as found on the website/pdf
-    validations:
-      required: false
-
-  - type: checkboxes
-    attributes:
-      label: Problem is present in the Pro Git book on the website?
-      description: If you found an issue in the pdf/epub/mobi files, you've checked if the problem is also present in the Pro Git book on the [website](https://www.git-scm.com/book/en/v2).
-      options:
-        - label: This bug also affects the Pro Git book as published on the website.
-    validations:
-      required: false
-
-  - type: dropdown
-    attributes:
-      label: Which version of the book is affected?
-      description: |
-        It's important for us to know if the problem is in the source or in the tooling that creates the pdf/epub/mobi files.
-        Therefore, please select which versions are affected.
-      options:
-        - "Source files"
-        - "Tooling"
-        - "Source files and tooling"
-        - "I don't know"
+      label: Applications Version
+      description: Please provide your test branch or commit-id
+      placeholder: 0.46, main, dev, etc.
     validations:
       required: true
 
