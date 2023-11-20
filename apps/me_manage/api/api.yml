@@ -1,0 +1,1366 @@
+/admin/content:
+  delete:
+    description: '-
+
+      -'
+    parameters:
+    - description: '{token}'
+      in: header
+      name: AuthToken
+      required: true
+      type: string
+    - description: content info
+      in: body
+      name: RequestBody
+      required: true
+      schema:
+        $ref: '#/definitions/form.Content'
+    produces:
+    - application/json
+    responses:
+      '200':
+        description: OK
+        schema:
+          $ref: '#/definitions/render.Base'
+      '400':
+        description: Bad Request
+        schema:
+          $ref: '#/definitions/models.Error'
+      '401':
+        description: Unauthorized
+        schema:
+          $ref: '#/definitions/models.Error'
+    summary: For admin /admin/content
+    tags:
+    - default
+  post:
+    description: '-
+
+      -'
+    parameters:
+    - description: '{token}'
+      in: header
+      name: AuthToken
+      required: true
+      type: string
+    - description: content info
+      in: body
+      name: RequestBody
+      required: true
+      schema:
+        $ref: '#/definitions/form.Content'
+    produces:
+    - application/json
+    responses:
+      '200':
+        description: OK
+        schema:
+          $ref: '#/definitions/render.Base'
+      '400':
+        description: Bad Request
+        schema:
+          $ref: '#/definitions/models.Error'
+      '401':
+        description: Unauthorized
+        schema:
+          $ref: '#/definitions/models.Error'
+    summary: For admin /admin/content
+    tags:
+    - default
+  put:
+    description: '-
+
+      -'
+    parameters:
+    - description: '{token}'
+      in: header
+      name: AuthToken
+      required: true
+      type: string
+    - description: content info
+      in: body
+      name: RequestBody
+      required: true
+      schema:
+        $ref: '#/definitions/form.Content'
+    produces:
+    - application/json
+    responses:
+      '200':
+        description: OK
+        schema:
+          $ref: '#/definitions/render.Base'
+      '400':
+        description: Bad Request
+        schema:
+          $ref: '#/definitions/models.Error'
+      '401':
+        description: Unauthorized
+        schema:
+          $ref: '#/definitions/models.Error'
+    summary: For admin /admin/content
+    tags:
+    - default
+/admin/group:
+  get:
+    description: '-
+
+      -'
+    parameters:
+    - description: '{token}'
+      in: header
+      name: AuthToken
+      required: true
+      type: string
+    - description: Group info
+      in: body
+      name: RequestBody
+      required: true
+      schema:
+        $ref: '#/definitions/form.Group'
+    produces:
+    - application/json
+    responses:
+      '200':
+        description: OK
+        schema:
+          $ref: '#/definitions/render.Base'
+      '400':
+        description: Bad Request
+        schema:
+          $ref: '#/definitions/models.Error'
+      '401':
+        description: Unauthorized
+        schema:
+          $ref: '#/definitions/models.Error'
+    summary: For admin /admin/group
+    tags:
+    - default
+  put:
+    description: '-
+
+      -'
+    parameters:
+    - description: '{token}'
+      in: header
+      name: AuthToken
+      required: true
+      type: string
+    - description: Group info
+      in: body
+      name: RequestBody
+      required: true
+      schema:
+        $ref: '#/definitions/form.Group'
+    produces:
+    - application/json
+    responses:
+      '200':
+        description: OK
+        schema:
+          $ref: '#/definitions/render.Base'
+      '400':
+        description: Bad Request
+        schema:
+          $ref: '#/definitions/models.Error'
+      '401':
+        description: Unauthorized
+        schema:
+          $ref: '#/definitions/models.Error'
+    summary: For admin /admin/group
+    tags:
+    - default
+/admin/kyc:
+  get:
+    description: '- swith Kyc query/update  method [get/put]
+
+      - if method is PUT, just update kyc_data field'
+    parameters:
+    - description: '{token}'
+      in: header
+      name: AuthToken
+      required: true
+      type: string
+    - description: Kyc info
+      in: body
+      name: RequestBody
+      required: true
+      schema:
+        $ref: '#/definitions/form.User'
+    produces:
+    - application/json
+    responses:
+      '200':
+        description: OK
+        schema:
+          $ref: '#/definitions/render.Kyc'
+      '400':
+        description: Bad Request
+        schema:
+          $ref: '#/definitions/models.Error'
+      '401':
+        description: Unauthorized
+        schema:
+          $ref: '#/definitions/models.Error'
+    summary: For admin /admin/kyc
+    tags:
+    - default
+  post:
+    description: '- swith Kyc query/update  method [get/put]
+
+      - if method is PUT, just update kyc_data field'
+    parameters:
+    - description: '{token}'
+      in: header
+      name: AuthToken
+      required: true
+      type: string
+    - description: Kyc info
+      in: body
+      name: RequestBody
+      required: true
+      schema:
+        $ref: '#/definitions/form.User'
+    produces:
+    - application/json
+    responses:
+      '200':
+        description: OK
+        schema:
+          $ref: '#/definitions/render.Kyc'
+      '400':
+        description: Bad Request
+        schema:
+          $ref: '#/definitions/models.Error'
+      '401':
+        description: Unauthorized
+        schema:
+          $ref: '#/definitions/models.Error'
+    summary: For admin /admin/kyc
+    tags:
+    - default
+  put:
+    description: '- swith Kyc query/update  method [get/put]
+
+      - if method is PUT, just update kyc_data field'
+    parameters:
+    - description: '{token}'
+      in: header
+      name: AuthToken
+      required: true
+      type: string
+    - description: Kyc info
+      in: body
+      name: RequestBody
+      required: true
+      schema:
+        $ref: '#/definitions/form.User'
+    produces:
+    - application/json
+    responses:
+      '200':
+        description: OK
+        schema:
+          $ref: '#/definitions/render.Kyc'
+      '400':
+        description: Bad Request
+        schema:
+          $ref: '#/definitions/models.Error'
+      '401':
+        description: Unauthorized
+        schema:
+          $ref: '#/definitions/models.Error'
+    summary: For admin /admin/kyc
+    tags:
+    - default
+/admin/language:
+  delete:
+    description: '-
+
+      -'
+    parameters:
+    - description: '{token}'
+      in: header
+      name: AuthToken
+      required: true
+      type: string
+    - description: Language
+      in: body
+      name: RequestBody
+      required: true
+      schema:
+        $ref: '#/definitions/form.Language'
+    produces:
+    - application/json
+    responses:
+      '200':
+        description: OK
+        schema:
+          $ref: '#/definitions/render.Base'
+      '400':
+        description: Bad Request
+        schema:
+          $ref: '#/definitions/models.Error'
+      '401':
+        description: Unauthorized
+        schema:
+          $ref: '#/definitions/models.Error'
+    summary: For admin /admin/language
+    tags:
+    - default
+  post:
+    description: '-
+
+      -'
+    parameters:
+    - description: '{token}'
+      in: header
+      name: AuthToken
+      required: true
+      type: string
+    - description: Language
+      in: body
+      name: RequestBody
+      required: true
+      schema:
+        $ref: '#/definitions/form.Language'
+    produces:
+    - application/json
+    responses:
+      '200':
+        description: OK
+        schema:
+          $ref: '#/definitions/render.Base'
+      '400':
+        description: Bad Request
+        schema:
+          $ref: '#/definitions/models.Error'
+      '401':
+        description: Unauthorized
+        schema:
+          $ref: '#/definitions/models.Error'
+    summary: For admin /admin/language
+    tags:
+    - default
+  put:
+    description: '-
+
+      -'
+    parameters:
+    - description: '{token}'
+      in: header
+      name: AuthToken
+      required: true
+      type: string
+    - description: Language
+      in: body
+      name: RequestBody
+      required: true
+      schema:
+        $ref: '#/definitions/form.Language'
+    produces:
+    - application/json
+    responses:
+      '200':
+        description: OK
+        schema:
+          $ref: '#/definitions/render.Base'
+      '400':
+        description: Bad Request
+        schema:
+          $ref: '#/definitions/models.Error'
+      '401':
+        description: Unauthorized
+        schema:
+          $ref: '#/definitions/models.Error'
+    summary: For admin /admin/language
+    tags:
+    - default
+/admin/login:
+  post:
+    description: '-'
+    parameters:
+    - description: '{token}'
+      in: header
+      name: AuthToken
+      required: true
+      type: string
+    - description: user info
+      in: body
+      name: RequestBody
+      required: true
+      schema:
+        $ref: '#/definitions/form.LoginUsers'
+    produces:
+    - application/json
+    responses:
+      '200':
+        description: OK
+        schema:
+          $ref: '#/definitions/render.Base'
+      '400':
+        description: Bad Request
+        schema:
+          $ref: '#/definitions/models.Error'
+      '401':
+        description: Unauthorized
+        schema:
+          $ref: '#/definitions/models.Error'
+    summary: For admin /admin/login
+    tags:
+    - default
+/admin/page:
+  delete:
+    description: '-
+
+      -'
+    parameters:
+    - description: '{token}'
+      in: header
+      name: AuthToken
+      required: true
+      type: string
+    - description: Page
+      in: body
+      name: RequestBody
+      required: true
+      schema:
+        $ref: '#/definitions/form.Page'
+    produces:
+    - application/json
+    responses:
+      '200':
+        description: OK
+        schema:
+          $ref: '#/definitions/render.Base'
+      '400':
+        description: Bad Request
+        schema:
+          $ref: '#/definitions/models.Error'
+      '401':
+        description: Unauthorized
+        schema:
+          $ref: '#/definitions/models.Error'
+    summary: For admin /admin/page
+    tags:
+    - default
+  post:
+    description: '-
+
+      -'
+    parameters:
+    - description: '{token}'
+      in: header
+      name: AuthToken
+      required: true
+      type: string
+    - description: Page
+      in: body
+      name: RequestBody
+      required: true
+      schema:
+        $ref: '#/definitions/form.Page'
+    produces:
+    - application/json
+    responses:
+      '200':
+        description: OK
+        schema:
+          $ref: '#/definitions/render.Base'
+      '400':
+        description: Bad Request
+        schema:
+          $ref: '#/definitions/models.Error'
+      '401':
+        description: Unauthorized
+        schema:
+          $ref: '#/definitions/models.Error'
+    summary: For admin /admin/page
+    tags:
+    - default
+  put:
+    description: '-
+
+      -'
+    parameters:
+    - description: '{token}'
+      in: header
+      name: AuthToken
+      required: true
+      type: string
+    - description: Page
+      in: body
+      name: RequestBody
+      required: true
+      schema:
+        $ref: '#/definitions/form.Page'
+    produces:
+    - application/json
+    responses:
+      '200':
+        description: OK
+        schema:
+          $ref: '#/definitions/render.Base'
+      '400':
+        description: Bad Request
+        schema:
+          $ref: '#/definitions/models.Error'
+      '401':
+        description: Unauthorized
+        schema:
+          $ref: '#/definitions/models.Error'
+    summary: For admin /admin/page
+    tags:
+    - default
+/admin/project:
+  delete:
+    description: '-
+
+      -'
+    parameters:
+    - description: '{token}'
+      in: header
+      name: AuthToken
+      required: true
+      type: string
+    - description: Project
+      in: body
+      name: RequestBody
+      required: true
+      schema:
+        $ref: '#/definitions/form.Project'
+    produces:
+    - application/json
+    responses:
+      '200':
+        description: OK
+        schema:
+          $ref: '#/definitions/render.Base'
+      '400':
+        description: Bad Request
+        schema:
+          $ref: '#/definitions/models.Error'
+      '401':
+        description: Unauthorized
+        schema:
+          $ref: '#/definitions/models.Error'
+    summary: For admin /admin/project
+    tags:
+    - default
+  post:
+    description: '-
+
+      -'
+    parameters:
+    - description: '{token}'
+      in: header
+      name: AuthToken
+      required: true
+      type: string
+    - description: Project
+      in: body
+      name: RequestBody
+      required: true
+      schema:
+        $ref: '#/definitions/form.Project'
+    produces:
+    - application/json
+    responses:
+      '200':
+        description: OK
+        schema:
+          $ref: '#/definitions/render.Base'
+      '400':
+        description: Bad Request
+        schema:
+          $ref: '#/definitions/models.Error'
+      '401':
+        description: Unauthorized
+        schema:
+          $ref: '#/definitions/models.Error'
+    summary: For admin /admin/project
+    tags:
+    - default
+  put:
+    description: '-
+
+      -'
+    parameters:
+    - description: '{token}'
+      in: header
+      name: AuthToken
+      required: true
+      type: string
+    - description: Project
+      in: body
+      name: RequestBody
+      required: true
+      schema:
+        $ref: '#/definitions/form.Project'
+    produces:
+    - application/json
+    responses:
+      '200':
+        description: OK
+        schema:
+          $ref: '#/definitions/render.Base'
+      '400':
+        description: Bad Request
+        schema:
+          $ref: '#/definitions/models.Error'
+      '401':
+        description: Unauthorized
+        schema:
+          $ref: '#/definitions/models.Error'
+    summary: For admin /admin/project
+    tags:
+    - default
+/admin/role:
+  delete:
+    description: '-
+
+      -'
+    parameters:
+    - description: '{token}'
+      in: header
+      name: AuthToken
+      required: true
+      type: string
+    - description: role info
+      in: body
+      name: RequestBody
+      required: true
+      schema:
+        $ref: '#/definitions/form.Role'
+    produces:
+    - application/json
+    responses:
+      '200':
+        description: OK
+        schema:
+          $ref: '#/definitions/render.Base'
+      '400':
+        description: Bad Request
+        schema:
+          $ref: '#/definitions/models.Error'
+      '401':
+        description: Unauthorized
+        schema:
+          $ref: '#/definitions/models.Error'
+    summary: For admin /admin/role
+    tags:
+    - default
+  get:
+    description: '-
+
+      -'
+    parameters:
+    - description: '{token}'
+      in: header
+      name: AuthToken
+      required: true
+      type: string
+    - description: role info
+      in: body
+      name: RequestBody
+      required: true
+      schema:
+        $ref: '#/definitions/form.Role'
+    produces:
+    - application/json
+    responses:
+      '200':
+        description: OK
+        schema:
+          $ref: '#/definitions/render.Base'
+      '400':
+        description: Bad Request
+        schema:
+          $ref: '#/definitions/models.Error'
+      '401':
+        description: Unauthorized
+        schema:
+          $ref: '#/definitions/models.Error'
+    summary: For admin /admin/role
+    tags:
+    - default
+  post:
+    description: '-
+
+      -'
+    parameters:
+    - description: '{token}'
+      in: header
+      name: AuthToken
+      required: true
+      type: string
+    - description: role info
+      in: body
+      name: RequestBody
+      required: true
+      schema:
+        $ref: '#/definitions/form.Role'
+    produces:
+    - application/json
+    responses:
+      '200':
+        description: OK
+        schema:
+          $ref: '#/definitions/render.Base'
+      '400':
+        description: Bad Request
+        schema:
+          $ref: '#/definitions/models.Error'
+      '401':
+        description: Unauthorized
+        schema:
+          $ref: '#/definitions/models.Error'
+    summary: For admin /admin/role
+    tags:
+    - default
+  put:
+    description: '-
+
+      -'
+    parameters:
+    - description: '{token}'
+      in: header
+      name: AuthToken
+      required: true
+      type: string
+    - description: role info
+      in: body
+      name: RequestBody
+      required: true
+      schema:
+        $ref: '#/definitions/form.Role'
+    produces:
+    - application/json
+    responses:
+      '200':
+        description: OK
+        schema:
+          $ref: '#/definitions/render.Base'
+      '400':
+        description: Bad Request
+        schema:
+          $ref: '#/definitions/models.Error'
+      '401':
+        description: Unauthorized
+        schema:
+          $ref: '#/definitions/models.Error'
+    summary: For admin /admin/role
+    tags:
+    - default
+/admin/staff:
+  delete:
+    description: '-'
+    parameters:
+    - description: '{token}'
+      in: header
+      name: AuthToken
+      required: true
+      type: string
+    - description: user info
+      in: body
+      name: RequestBody
+      required: true
+      schema:
+        $ref: '#/definitions/form.AdminUsers'
+    produces:
+    - application/json
+    responses:
+      '200':
+        description: OK
+        schema:
+          $ref: '#/definitions/render.Base'
+      '400':
+        description: Bad Request
+        schema:
+          $ref: '#/definitions/models.Error'
+      '401':
+        description: Unauthorized
+        schema:
+          $ref: '#/definitions/models.Error'
+    summary: For admin /admin/staff
+    tags:
+    - default
+  get:
+    description: '-'
+    parameters:
+    - description: '{token}'
+      in: header
+      name: AuthToken
+      required: true
+      type: string
+    - description: user info
+      in: body
+      name: RequestBody
+      required: true
+      schema:
+        $ref: '#/definitions/form.AdminUsers'
+    produces:
+    - application/json
+    responses:
+      '200':
+        description: OK
+        schema:
+          $ref: '#/definitions/render.Base'
+      '400':
+        description: Bad Request
+        schema:
+          $ref: '#/definitions/models.Error'
+      '401':
+        description: Unauthorized
+        schema:
+          $ref: '#/definitions/models.Error'
+    summary: For admin /admin/staff
+    tags:
+    - default
+  post:
+    description: '-'
+    parameters:
+    - description: '{token}'
+      in: header
+      name: AuthToken
+      required: true
+      type: string
+    - description: user info
+      in: body
+      name: RequestBody
+      required: true
+      schema:
+        $ref: '#/definitions/form.AdminUsers'
+    produces:
+    - application/json
+    responses:
+      '200':
+        description: OK
+        schema:
+          $ref: '#/definitions/render.Base'
+      '400':
+        description: Bad Request
+        schema:
+          $ref: '#/definitions/models.Error'
+      '401':
+        description: Unauthorized
+        schema:
+          $ref: '#/definitions/models.Error'
+    summary: For admin /admin/staff
+    tags:
+    - default
+  put:
+    description: '-'
+    parameters:
+    - description: '{token}'
+      in: header
+      name: AuthToken
+      required: true
+      type: string
+    - description: user info
+      in: body
+      name: RequestBody
+      required: true
+      schema:
+        $ref: '#/definitions/form.AdminUsers'
+    produces:
+    - application/json
+    responses:
+      '200':
+        description: OK
+        schema:
+          $ref: '#/definitions/render.Base'
+      '400':
+        description: Bad Request
+        schema:
+          $ref: '#/definitions/models.Error'
+      '401':
+        description: Unauthorized
+        schema:
+          $ref: '#/definitions/models.Error'
+    summary: For admin /admin/staff
+    tags:
+    - default
+/me_manager/group:
+  delete:
+    description: '-
+
+      -'
+    parameters:
+    - description: '{token}'
+      in: header
+      name: AuthToken
+      required: true
+      type: string
+    - description: Group info
+      in: body
+      name: RequestBody
+      required: true
+      schema:
+        $ref: '#/definitions/form.Group'
+    produces:
+    - application/json
+    responses:
+      '200':
+        description: OK
+        schema:
+          $ref: '#/definitions/render.Base'
+      '400':
+        description: Bad Request
+        schema:
+          $ref: '#/definitions/models.Error'
+      '401':
+        description: Unauthorized
+        schema:
+          $ref: '#/definitions/models.Error'
+    summary: For me_manager /me_manager/group
+    tags:
+    - default
+  get:
+    description: '-
+
+      -'
+    parameters:
+    - description: '{token}'
+      in: header
+      name: AuthToken
+      required: true
+      type: string
+    - description: Group info
+      in: body
+      name: RequestBody
+      required: true
+      schema:
+        $ref: '#/definitions/form.Group'
+    produces:
+    - application/json
+    responses:
+      '200':
+        description: OK
+        schema:
+          $ref: '#/definitions/render.Base'
+      '400':
+        description: Bad Request
+        schema:
+          $ref: '#/definitions/models.Error'
+      '401':
+        description: Unauthorized
+        schema:
+          $ref: '#/definitions/models.Error'
+    summary: For me_manager /me_manager/group
+    tags:
+    - default
+  post:
+    description: '-
+
+      -'
+    parameters:
+    - description: '{token}'
+      in: header
+      name: AuthToken
+      required: true
+      type: string
+    - description: Group info
+      in: body
+      name: RequestBody
+      required: true
+      schema:
+        $ref: '#/definitions/form.Group'
+    produces:
+    - application/json
+    responses:
+      '200':
+        description: OK
+        schema:
+          $ref: '#/definitions/render.Base'
+      '400':
+        description: Bad Request
+        schema:
+          $ref: '#/definitions/models.Error'
+      '401':
+        description: Unauthorized
+        schema:
+          $ref: '#/definitions/models.Error'
+    summary: For me_manager /me_manager/group
+    tags:
+    - default
+/me_manager/kyc:
+  get:
+    description: '- swith Kyc query/update  method [get/put]
+
+      - if method is PUT, just update kyc_data field'
+    parameters:
+    - description: '{token}'
+      in: header
+      name: AuthToken
+      required: true
+      type: string
+    - description: Kyc info
+      in: body
+      name: RequestBody
+      required: true
+      schema:
+        $ref: '#/definitions/form.User'
+    produces:
+    - application/json
+    responses:
+      '200':
+        description: OK
+        schema:
+          $ref: '#/definitions/render.Kyc'
+      '400':
+        description: Bad Request
+        schema:
+          $ref: '#/definitions/models.Error'
+      '401':
+        description: Unauthorized
+        schema:
+          $ref: '#/definitions/models.Error'
+    summary: For admin /admin/kyc
+    tags:
+    - default
+/me_manager/member:
+  delete:
+    description: '-
+
+      -'
+    parameters:
+    - description: '{token}'
+      in: header
+      name: AuthToken
+      required: true
+      type: string
+    - description: Member info
+      in: body
+      name: RequestBody
+      required: true
+      schema:
+        $ref: '#/definitions/form.Member'
+    produces:
+    - application/json
+    responses:
+      '200':
+        description: OK
+        schema:
+          $ref: '#/definitions/render.Base'
+      '400':
+        description: Bad Request
+        schema:
+          $ref: '#/definitions/models.Error'
+      '401':
+        description: Unauthorized
+        schema:
+          $ref: '#/definitions/models.Error'
+    summary: For me_manager /me_manager/member
+    tags:
+    - default
+  post:
+    description: '-
+
+      -'
+    parameters:
+    - description: '{token}'
+      in: header
+      name: AuthToken
+      required: true
+      type: string
+    - description: Member info
+      in: body
+      name: RequestBody
+      required: true
+      schema:
+        $ref: '#/definitions/form.Member'
+    produces:
+    - application/json
+    responses:
+      '200':
+        description: OK
+        schema:
+          $ref: '#/definitions/render.Base'
+      '400':
+        description: Bad Request
+        schema:
+          $ref: '#/definitions/models.Error'
+      '401':
+        description: Unauthorized
+        schema:
+          $ref: '#/definitions/models.Error'
+    summary: For me_manager /me_manager/member
+    tags:
+    - default
+/me_manager/nft:
+  post:
+    description: '-
+
+      -'
+    parameters:
+    - description: '{token}'
+      in: header
+      name: AuthToken
+      required: true
+      type: string
+    - description: Nft info
+      in: body
+      name: RequestBody
+      required: true
+      schema:
+        $ref: '#/definitions/form.NftReq'
+    produces:
+    - application/json
+    responses:
+      '200':
+        description: OK
+        schema:
+          $ref: '#/definitions/render.Base'
+      '400':
+        description: Bad Request
+        schema:
+          $ref: '#/definitions/models.Error'
+      '401':
+        description: Unauthorized
+        schema:
+          $ref: '#/definitions/models.Error'
+    summary: For me_manager /me_manager/nft
+    tags:
+    - default
+/me_manager/user/sign_in:
+  post:
+    description: '-'
+    parameters:
+    - description: '{token}'
+      in: header
+      name: AuthToken
+      required: true
+      type: string
+    - description: User info
+      in: body
+      name: RequestBody
+      required: true
+      schema:
+        $ref: '#/definitions/form.User'
+    produces:
+    - application/json
+    responses:
+      '200':
+        description: OK
+        schema:
+          $ref: '#/definitions/render.Base'
+      '400':
+        description: Bad Request
+        schema:
+          $ref: '#/definitions/models.Error'
+      '401':
+        description: Unauthorized
+        schema:
+          $ref: '#/definitions/models.Error'
+    summary: For me_manager /me_manager/users
+    tags:
+    - default
+/me_manager/user/sign_up:
+  post:
+    description: '-'
+    parameters:
+    - description: '{token}'
+      in: header
+      name: AuthToken
+      required: true
+      type: string
+    - description: User info
+      in: body
+      name: RequestBody
+      required: true
+      schema:
+        $ref: '#/definitions/form.User'
+    produces:
+    - application/json
+    responses:
+      '200':
+        description: OK
+        schema:
+          $ref: '#/definitions/render.Base'
+      '400':
+        description: Bad Request
+        schema:
+          $ref: '#/definitions/models.Error'
+      '401':
+        description: Unauthorized
+        schema:
+          $ref: '#/definitions/models.Error'
+    summary: For me_manager /me_manager/users
+    tags:
+    - default
+/me_manager/userAddress:
+  post:
+    description: '-
+
+      -'
+    parameters:
+    - description: '{token}'
+      in: header
+      name: AuthToken
+      required: true
+      type: string
+    - description: UserAddress info
+      in: body
+      name: RequestBody
+      required: true
+      schema:
+        $ref: '#/definitions/form.UserAddress'
+    produces:
+    - application/json
+    responses:
+      '200':
+        description: OK
+        schema:
+          $ref: '#/definitions/render.Base'
+      '400':
+        description: Bad Request
+        schema:
+          $ref: '#/definitions/models.Error'
+      '401':
+        description: Unauthorized
+        schema:
+          $ref: '#/definitions/models.Error'
+    summary: For me_manager /me_manager/userAddress
+    tags:
+    - default
+/normal/content:
+  get:
+    description: '-
+
+      -'
+    parameters:
+    - description: '{token}'
+      in: header
+      name: AuthToken
+      required: true
+      type: string
+    - description: content info
+      in: body
+      name: RequestBody
+      required: true
+      schema:
+        $ref: '#/definitions/form.Content'
+    produces:
+    - application/json
+    responses:
+      '200':
+        description: OK
+        schema:
+          $ref: '#/definitions/render.Base'
+      '400':
+        description: Bad Request
+        schema:
+          $ref: '#/definitions/models.Error'
+      '401':
+        description: Unauthorized
+        schema:
+          $ref: '#/definitions/models.Error'
+    summary: For admin /admin/content
+    tags:
+    - default
+/normal/language:
+  get:
+    description: '-
+
+      -'
+    parameters:
+    - description: '{token}'
+      in: header
+      name: AuthToken
+      required: true
+      type: string
+    - description: Language
+      in: body
+      name: RequestBody
+      required: true
+      schema:
+        $ref: '#/definitions/form.Language'
+    produces:
+    - application/json
+    responses:
+      '200':
+        description: OK
+        schema:
+          $ref: '#/definitions/render.Base'
+      '400':
+        description: Bad Request
+        schema:
+          $ref: '#/definitions/models.Error'
+      '401':
+        description: Unauthorized
+        schema:
+          $ref: '#/definitions/models.Error'
+    summary: For admin /admin/language
+    tags:
+    - default
+/normal/page:
+  get:
+    description: '-
+
+      -'
+    parameters:
+    - description: '{token}'
+      in: header
+      name: AuthToken
+      required: true
+      type: string
+    - description: Page
+      in: body
+      name: RequestBody
+      required: true
+      schema:
+        $ref: '#/definitions/form.Page'
+    produces:
+    - application/json
+    responses:
+      '200':
+        description: OK
+        schema:
+          $ref: '#/definitions/render.Base'
+      '400':
+        description: Bad Request
+        schema:
+          $ref: '#/definitions/models.Error'
+      '401':
+        description: Unauthorized
+        schema:
+          $ref: '#/definitions/models.Error'
+    summary: For admin /admin/page
+    tags:
+    - default
+/normal/project:
+  get:
+    description: '-
+
+      -'
+    parameters:
+    - description: '{token}'
+      in: header
+      name: AuthToken
+      required: true
+      type: string
+    - description: Project
+      in: body
+      name: RequestBody
+      required: true
+      schema:
+        $ref: '#/definitions/form.Project'
+    produces:
+    - application/json
+    responses:
+      '200':
+        description: OK
+        schema:
+          $ref: '#/definitions/render.Base'
+      '400':
+        description: Bad Request
+        schema:
+          $ref: '#/definitions/models.Error'
+      '401':
+        description: Unauthorized
+        schema:
+          $ref: '#/definitions/models.Error'
+    summary: For admin /admin/project
+    tags:
+    - default
